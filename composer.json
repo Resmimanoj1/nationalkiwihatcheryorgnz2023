@@ -1,0 +1,109 @@
+{
+    "authors": [
+        {
+            "email": "digital@nttourism.co.nz",
+            "homepage": "https://www.ngaitahutourism.co.nz",
+            "name": "Ngāi Tahu Tourism",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "process-timeout": 600,
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true
+        }
+    },
+    "description": "Guided Walks. SilverStripe website.",
+    "homepage": "https://www.nzwalks.com/",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "name": "ngaitahutourism/nzwalks2023",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-sesmail"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-alert"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-elemental-block-for-faq"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-elemental-blocks"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-experiences"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-faq"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-header"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/ngaitahutourism-silverstripe-standard-mods"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ngaitahutourism/silverstripe-footer"
+        }
+    ],
+    "require": {
+        "ngaitahutourism/silverstripe-elemental-blocks": "^3.4",
+        "ngaitahutourism/silverstripe-header": "^9",
+        "ngaitahutourism/silverstripe-footer": "^11",
+        "dynamic/silverstripe-elemental-gallery": "^2.0",
+        "ngaitahutourism/silverstripe-alert": "^3",
+        "ngaitahutourism/silverstripe-elemental-block-for-faq": "^2.0",
+        "ngaitahutourism/silverstripe-experiences": "1.2.*",
+        "ngaitahutourism/silverstripe-faq": "2.0.*",
+        "phpmailer/phpmailer": "^6.4",
+        "symbiote/silverstripe-sesmail": "dev-workaround",
+        "undefinedoffset/silverstripe-nocaptcha": "2.1.*"
+    },
+    "support": {
+        "email": "digital@nttourism.co.nz",
+        "issues": "https://github.com/ngaitahutourism/nzwalkscom/issues",
+        "source": "https://github.com/ngaitahutourism/nzwalkscom"
+    },
+    "type": "project",
+    "extra": {
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/database.yml",
+            "app/_config/mimevalidator.yml",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ]
+    },
+    "scripts": {
+        "install": "composer install",
+        "dev-build": "sake dev/build flush=1",
+        "expose": "composer vendor-expose",
+        "refresh": [
+            "@install",
+            "@dev-build",
+            "@expose"
+        ]
+    }
+}

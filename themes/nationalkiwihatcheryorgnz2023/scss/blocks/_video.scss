@@ -1,0 +1,101 @@
+/* Video Block */
+
+.video {
+	float:left; width: 100%; margin: 0; padding: 0; height: 100vh; background:$dark-brown; z-index: 2; overflow: hidden;
+
+	&__background {
+	  background: #000;
+	  position: absolute;
+	  top: 0; right: 0; bottom: 0; left: 0;
+	  z-index: 1;
+	}
+	&__foreground,
+	&__background iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	@media (min-aspect-ratio: 16/9) {
+	  &__foreground { height: 300%; top: -100%; }
+	}
+	@media (max-aspect-ratio: 16/9) {
+	  &__foreground { width: 300%; left: -100%; }
+	}
+
+	@include mobile {
+		height: calc(100vh - 185px);
+	}
+}
+
+.video__cta {
+	position: absolute; z-index: 10; background: rgba($dark-brown, .8); border-radius: 100%; width: 180px; height: 180px; text-align: center; color: #FFF; bottom: 30px; left: 30px; border: none;  text-transform: uppercase; transition: all 0.2s ease-in-out;
+	& > span {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    text-align: center;
+    z-index: 3;
+    color: #FFF;
+	}
+	.cta__cta-line1 { float: left; width: 100%; font-size: 14px; line-height: 16px; padding: 0; font-weight: 800; font-style: italic; }
+	.cta__cta-line2 { float: left; width: 100%; font-size: 34px; line-height: 32px; font-weight: 800; font-style: italic; padding: 0; margin: 4px 0 0 0; }
+	&:hover { color: #FFF; background: rgba($dark-brown, 1); box-shadow: 0 0 5px 0 rgba(0,0,0,.25); transform: scale(1.1) rotate(-2deg); border: none; }
+	&:after { display: none; }
+
+	@include mobile {
+		width:150px; height: 150px; left: calc(50% - 75px);
+		.cta__cta-line1 { font-size: 12px; line-height: 14px; }
+		.cta__cta-line2 { font-size: 28px; line-height: 30px;  }
+
+	}
+
+	@include minimobile {
+		width:120px; height: 120px; left: calc(50% - 60px); background: rgba($dark-brown, 0.8);
+		.cta__cta-line1 { font-size: 8px; line-height: 10px; }
+		.cta__cta-line2 { font-size: 18px; line-height: 20px; }
+	}
+}
+
+.volume { position: absolute; top: 30px; right: 30px; width: 30px; height: 30px; color: #fff; font-size: 30px; z-index: 9; transition: all 0.2s ease-in-out; cursor: pointer;
+	&.togglesound { display: none; }
+	&:hover { color: $dark-brown; }
+}
+
+.h2-custom-video-title {
+	font-size: 70px; line-height: 85px; padding: 16px 0 12px 0;
+	@include tablet { font-size: 45px; line-height: 50px; padding: 14px 0 10px 0; }
+}
+
+@media (max-width: 1024px){
+ .h2-custom-video-title {
+   font-size: 55px;
+   line-height: 65px;
+   padding: 12px 0 8px 0;
+ }
+}
+
+.container-fluid{height:100%;padding:0}
+
+.video-hero{width:100%;background:#000;color:#fff;overflow:hidden;z-index:3;height:300px;position:relative;margin-bottom:8px}
+.video-hero .container-fluid{height:100%;padding:0}
+.video-hero__text{text-align:center;position:absolute;z-index:1;height:100%;width:100%;padding-top:1rem;background-image:linear-gradient(#000, transparent)}
+.video-hero__logo{display:none}
+.video-hero .video__foreground{display:none}
+.video-hero .video-image{width:100%;height:300px;background-size:cover;background-position:center}
+@media (min-width: 768px){.video-hero{height:450px}
+.video-hero__text{padding-top:2rem}
+.video-hero__logo{display:inline-block;margin-bottom:1.5rem;width:150px;height:142px}
+.video-hero .video-image{height:450px}}
+@media (min-width: 992px){
+  .video-hero{height:87vh}.video-hero__text{top:0;padding-top:3rem}
+  .video-hero__logo{width:300px;height:284px}
+  .video-hero .video__foreground{display:block}
+  .video-hero .video-image{height:100%}
+}
+
+.video__background{background:none;position:absolute;top:0;right:0;bottom:0;left:0;z-index:1}

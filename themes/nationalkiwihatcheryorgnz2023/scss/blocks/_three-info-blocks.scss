@@ -1,0 +1,81 @@
+/* Two Col Scss Document */
+
+.three-info-blocks {
+	float: left; width: 100%; padding: 30px; background: #000; display: flex; flex-wrap: wrap;
+
+	@include desktop 	{ padding: 15px; }
+	@include tablet 	{ padding: 10px; }
+
+	&__col {
+		float: left; width: calc(100% / 3 - 30px); margin: 15px; background: #000; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); padding: 20px 20px 90px; overflow: hidden; transition: all 0.2s ease-in-out; color: #fff;
+
+		.btn {
+			position: absolute; bottom: 20px; left: 20px; width: calc(100% - 40px) !important; width: 100%; text-align: center; background: $green; border-color: $green; z-index: 1;
+
+		}
+
+		&:hover { box-shadow: 0 0 25px $green-hover; }
+		&:hover .btn { background: darken($green-hover, 30%); border-color: darken($green-hover, 30%); box-shadow: none; }
+
+		@include desktop {
+			width: calc(100% / 2 - 20px); margin: 10px;
+			&:nth-child(3n) { width: 100%; }
+		}
+		@include mobile {
+			width: 100%; margin: 10px;
+			&:nth-child(3n) { width: 100%; }
+		}
+	}
+
+	&__image { float: left; width: calc(100% + 40px); margin: -20px 0 0 -20px;
+		img { display: block; width: 100%; height: auto; }
+	}
+
+	&__text {
+		float: left; width: 100%; margin-top: -20px; z-index: 3;
+		h2 { font-size: 28px; line-height: 26px;}
+	}
+
+
+}
+
+
+.three-info-blocks.grey {
+	.three-info-blocks__col {
+		background: #efefef; color: #000;
+		h2 { color: $dark-brown; }
+		&:after {
+			background: #CCC;
+			background: -moz-linear-gradient(left, #CCC 0%, #efefef 100%);
+			background: -webkit-linear-gradient(left, #CCC 0%, #efefef 100%);
+			background: linear-gradient(to right, #CCC 0%, #efefef 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CCC', endColorstr='#efefef',GradientType=1 );
+		}
+
+	}
+}
+
+
+.three-info-blocks__col .btn {
+  background-color: $green;
+  border-color: transparent;
+  border: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.three-info-blocks__col .btn:hover {
+  background-color: $green-hover;
+}
+
+.three-info-blocks__col:after {
+  display: none;
+}
+
+.three-info-blocks__col:hover .btn {
+    background: $green-hover;
+    border-color: transparent;
+}
+
+.three-info-blocks__text h2 {
+    line-height: 34px;
+}

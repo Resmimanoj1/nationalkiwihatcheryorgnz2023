@@ -1,0 +1,31 @@
+.userform {
+
+	* { float: left; width: 100%; position: relative; }
+	label { font-size: 19px; top: 30px; transition: all 0.2s ease-in-out; padding: 0 10px; }
+	.focus label { top: 5px; color: $dark-brown; font-size: 12px; }
+	.focus input[type=text],
+	.focus input[type=email],
+	.focus textarea { border-color: $dark-brown; }
+}
+
+input[type=password],
+input[type=text],
+input[type=email],
+textarea {
+	width: 100%; float: left; border: none; border-bottom: 1px solid #666; padding: 10px; margin: 0 0 10px; background: none; font-size: 19px;
+	&:focus { outline: none }
+}
+
+input[type=submit] { display: inline-block; background: $dark-brown; padding: 15px 30px; color: #FFF; cursor: pointer; transition: all 0.1s ease-in-out; border: none !important; margin: 15px 5px 0 0; text-transform: uppercase; font-size: 26px; border-radius:2px; font-family: $headersh4!important; font-weight: $bold; font-style: italic; -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5); box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+	&:hover { background: $dark-brown; border: none; color: #FFF; -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.5); }
+
+}
+
+
+#MemberLoginForm_LoginForm div { float: left; width: 100%; margin: 5px 0; }
+#ForgotPassword { margin: 20px 0; }
+
+#ChangePasswordForm_ChangePasswordForm_NewPassword1_Holder, #ChangePasswordForm_ChangePasswordForm_NewPassword2_Holder {
+    position: initial;
+}

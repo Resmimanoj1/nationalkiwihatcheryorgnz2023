@@ -1,0 +1,25 @@
+.element {
+  // container can be replaced with bootstrap class if installed/needed
+  .container {
+    float: left;
+    width: 100%;
+    position: relative;
+    background: transparent;
+
+    margin: 0 auto;
+    padding: 0px;
+
+    @include desktop-mega {
+      float: left;
+      width: 100%;
+    }
+
+    @include desktop {
+      padding: 0px;
+    }
+
+    @include mobile {
+      padding: 0px;
+    }
+  }
+}

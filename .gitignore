@@ -1,0 +1,11 @@
+/.env
+/.graphql-generated/
+/_graphql/
+/assets/
+/node_modules/
+/resources/
+/silverstripe-cache/
+/themes/simple/
+/vendor/
+/.idea
+/**/.sass-cache

@@ -1,0 +1,105 @@
+/* Two Col Scss Document */
+
+.two-col {
+	float: left; width: 100%; margin: 0; padding: 0; position: relative; background: transparent;
+
+	.image-text-block__image { max-width: 100%; height: auto; margin-top: 10px; }
+
+	.full {
+		float: left; width: 100%; padding: 30px 30px 0;
+		@include tablet { padding: 20px 20px 0; }
+	}
+
+	&__col { float: left; width: 50%;
+		&.left 	{ padding: 30px 25px 30px 30px; }
+		&.right { padding: 30px 30px 30px 25px; }
+
+		@include desktop {
+			&.left 	{ width: 100%; padding: 20px 20px 0px 20px; }
+			&.right { width: 100%; padding: 20px 20px 20px 20px; }
+		}
+	}
+
+
+	.update {
+		float: left; width: 100%; margin: 20px 0;
+		&__row { float:left; width: 100%; margin: 0 0 20px; }
+		&__icon { float: left; width: 80px; font-size: 40px; text-align: center;}
+		&__text { float: left; width: calc(100% - 80px); padding: 10px 0 0 0; }
+	}
+
+	&__info {
+		background: $dark-brown; padding: 15px 20px; border-radius: 5px; margin: 20px 0; -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5); box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+		h4 { border-bottom: 2px solid darken($dark-brown, 15%); padding: 0 20px 15px; margin: 0 0 20px -20px; width: calc(100% + 40px);
+			span { float: left; width: 100%; font-weight: $bodynormal; font-size: 14px; margin: 0 0 5px; color: rgba(255,255,255,.5); }
+		}
+	}
+
+	&__fullwidthbtn {
+			float: left;
+			width: 30%;
+    	margin: 0 35%;
+			padding: 0 30px 30px;
+
+			@include tablet {
+				padding: 0 20px 40px;
+				width: 100%;
+				margin: 0;
+			}
+
+			@include mobile {
+				padding: 0 20px 20px;
+				width: 100%;
+				margin: 0;
+			}
+
+		.btn {
+			display: block;
+			text-align: center;
+			width: 100%;
+			padding: 20px 10px 15px;
+			font-size: 26px;
+			font-family: $headersh3;
+			line-height: 1.2;
+
+			@include tablet {
+				font-size: 23px;
+			}
+
+			@include mobile {
+				font-size: 19px;
+			}
+		}
+
+	}
+
+
+}
+
+body--homepage.two-col { margin: -20px 0 0 0; }
+
+.two-col.red {
+	background: $dark-brown; color: $white;
+	p,
+	h2,
+	h3,
+	h4 { color: $white; }
+}
+
+img.leftAlone.ss-htmleditorfield-file.image.center {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.two-col .left h2, .two-col .right h2 {
+	padding: 0 0 12px;
+}
+
+.extra-vert-space {
+	margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.extra-above-space {
+	margin-top: 40px;
+}

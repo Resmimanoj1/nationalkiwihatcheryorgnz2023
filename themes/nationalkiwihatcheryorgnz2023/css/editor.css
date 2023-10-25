@@ -1,0 +1,39 @@
+/* This is for what shows in the admin WYSIWYG under the Formats drop down menu */
+
+.calltoactionbuttonprimary {
+  background-color: #F25A2B;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  color: #fff;
+  border: 0;
+  font-size: 19px;
+  margin: 20px 0;
+}
+
+.calltoactionbuttonsecondary {
+  background-color: #3d301b;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  color: #fff;
+  border: 0;
+  font-size: 19px;
+  margin: 20px 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}

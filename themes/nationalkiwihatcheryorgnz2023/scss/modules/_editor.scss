@@ -1,0 +1,73 @@
+/* This is for how the custom setting in the admin WYSIWYG under the Formats drop down menu renders like on the site */
+
+.calltoactionbuttonprimary {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 16px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  font-family: $headersh3;
+  font-weight: $bodynormal;
+  transition: all 0.2s ease-in-out;
+  float: left;
+  cursor: pointer;
+  background-color: $green;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+
+  @include tablet {
+    font-size: 23px;
+  }
+
+  @include mobile {
+    font-size: 19px;
+  }
+}
+
+.calltoactionbuttonprimary a {
+ color: #fff;
+}
+
+.calltoactionbuttonprimary:hover {
+ background-color: $green-hover;
+ -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+ box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.calltoactionbuttonsecondary {
+ text-transform: uppercase;
+ text-decoration: none;
+ padding: 20px 16px 15px;
+ color: #fff;
+ border: 0;
+ font-size: 20px;
+ font-family: $headersh3;
+ font-weight: $bodynormal;
+ transition: all 0.2s ease-in-out;
+ float: left;
+ cursor: pointer;
+ background-color: $dark-brown;
+ -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+ margin: 20px 0;
+
+ @include tablet {
+   font-size: 23px;
+ }
+
+ @include mobile {
+   font-size: 19px;
+ }
+}
+
+.calltoactionbuttonsecondary a {
+ color: #fff;
+}
+
+.calltoactionbuttonsecondary:hover {
+ background-color: $dark-brown-hover;
+ -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+ box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+}

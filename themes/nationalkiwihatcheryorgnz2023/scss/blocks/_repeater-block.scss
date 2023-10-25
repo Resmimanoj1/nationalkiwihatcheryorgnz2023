@@ -1,0 +1,27 @@
+/* This is for customising the Repeater Block */
+
+@media (min-width: 1008px){
+  .repeater-block .container .row h2 {
+    padding-left: 65px;
+  }
+}
+
+@media (max-width: 1007px){
+  .repeater-block .container .row h2 {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 543px){
+  .repeater-block .container .row h2 {
+    padding-left: 20px;
+  }
+}
+
+.callout h4, a.btn.trans.white {
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+a.btn:hover {
+  color: $white;
+}

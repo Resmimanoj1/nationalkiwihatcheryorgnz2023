@@ -1,0 +1,48 @@
+/* Alert bar */
+.alert-bar {
+	display: block;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.75);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.75);
+	position: relative;
+	float: left;
+	width: 100%;
+	z-index: 9999;
+	text-align: center;
+	transition: all 0.8s ease-in-out;
+
+	p { padding: 10px 0; margin: 0; font-size: 16px; white-space: normal; text-overflow: ellipsis; overflow: hidden; padding:10px; }
+
+	&.warning {
+		background: $dark-brown;
+		p { color: #FFF; font-weight: bold; }
+		p::before {
+			font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f071"; margin: 0 5px 0 0;
+		  }
+		a {
+			color: #fff; text-decoration: underline;
+			&:after { background: $dark-brown; }
+		}
+		a:hover { color: $dark-brown; }
+	}
+
+	&.informational {
+		background:darken($dark-brown, 15%);
+		p { color: #FFF; font-weight: bold; }
+		p::before {
+			font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f05a"; margin: 0 5px 0 0;
+		  }
+		a {
+			color: darken($dark-brown, 0%); text-decoration: underline;
+			&:after { background: darken($dark-brown, 35%); }
+		}
+		a:hover { color: darken($dark-brown, 35%); }
+	}
+
+
+}
+
+@include desktop {
+	.alert .page-header .header-nav {
+		padding: 48px 0 0 0;
+	}
+}

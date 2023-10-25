@@ -1,0 +1,104 @@
+/* Banner Scss Document */
+/* Stacked Block */
+
+//Dots menu
+.slick-dots { position: absolute; bottom: 40px; left: 0; width: 100%; text-align: center; z-index: 9; padding: 0;
+	li { display: inline; margin: 0;
+		button { padding: 0; border: 1px solid #FFF; border-radius: 50%; width: 20px; height: 20px; overflow: hidden; text-indent: -999px; margin: 0 10px; background: rgba(255,255,255,0); transition: all 0.2s ease-in-out; cursor: pointer;
+			&:hover { background: rgba(255,255,255,.5); }
+		}
+	}
+	li.slick-active {
+		button { background: rgba(255,255,255,1); }
+	}
+}
+
+.image-slider {
+	float: left; width: 100%; margin: 0; padding: 0; height: calc(100vh - 150px); position: relative; background: #efefef;
+	max-width: 100vw; width: 100%;
+	@include mobile { height: 70vh; }
+	&__container {
+		float: left; max-width: 100vw; width:100%; margin: 0; padding: 0; position: relative; overflow: hidden;
+	}
+	.slick-slider { width: 100%; }
+	.center-text {
+		position: absolute;
+		top: 50%;
+		left: 40px;
+		-webkit-tranform:  translate(0, -50%);
+		transform: translate(0, -50%);
+		width: calc(50% - 40px);
+		text-align: center;
+		z-index: 3;
+		color: #FFF;
+		@include desktop-large { width: calc(60% - 40px); }
+		@include desktop { width: calc(70% - 40px); }
+		@include tablet { width: calc(100% - 80px); }
+		@include mobile { width: calc(100% - 40px); left: 20px; top: 40%; }
+
+		.btn.trans:hover { color: $white; border-color: $green-hover; }
+	}
+	.slick-slide {
+		float: left; width: 100%; height: calc(100vh - 150px);
+		@include mobile { height: 70vh; }
+	}
+
+	&__image {
+		float: left; width: 100%; height: calc(100vh - 150px); position: relative; top: 0; left: 0;
+		@include mobile { height: 70vh; }
+
+		img { width: 100%; height: 100%; object-fit: cover; filter: blur(8px); -webkit-filter: blur(8px); transition: all 1.2s ease-in-out;
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+		}
+	}
+	&__image.blur {
+		img { filter: blur(0px); -webkit-filter: blur(0px);
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		}
+	}
+
+	&__shade { position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+		@include desktop { width: 100%; }
+	}
+
+
+
+	&__buttonrow,
+	&__linetwo,
+	&__lineone { float: left; width: 100%; text-align: left;
+		@include tablet { text-align: center; }
+	}
+
+	&__buttonrow {
+		margin: 20px 0 0 0;
+		@include mobile { margin: 0; }
+	}
+
+	&__lineone h2 {
+		color: #FFF; font-size: 80px; line-height: 65px; margin: 0; padding: 0; text-shadow: 0 0 30px $grey;
+		@include desktop { font-size: 70px; line-height: 65px; }
+		@include tablet { font-size: 60px; line-height: 55px; }
+		@include mobile { font-size: 40px; line-height: 35px; }
+		@include minimobile { font-size: 40px; line-height: 35px; }
+	}
+	&__linetwo { margin: 10px 0;}
+	&__linetwo p {
+		color: #FFF; text-shadow: 0 0 2px rgba(0,0,0,.25); font-size: 22px; line-height: 28px; font-weight: $bodybold; font-style: italic;
+		@include tablet { font-size: 16px; line-height:26px; }
+		@include mobile { font-size: 16px; line-height: 24px; }
+	}
+
+	.btn.trans { color: #FFF; }
+}

@@ -1,0 +1,32 @@
+/* Breadcrumb Scss Document */
+
+.breadcrumb { 
+	
+	float:left; width: 100%; background: #efefef; font-size: 14px; padding: 10px 30px; line-height: 20px;
+	span { display: inline-block; margin: 0 2px; }
+	a { 
+		text-decoration: none; border: none; 
+		&:hover { color: darken($dark-brown, 20%); }
+	}
+	
+	@include tablet { 
+		font-size: 12px; text-align: center; line-height: 18px; padding: 10px 20px;
+	}
+	@include minimobile { 
+		font-size: 10px; line-height: 16px;
+	}
+	
+}
+
+.no-hero-bread .breadcrumb { 
+
+	background: darken($dark-brown, 5%); 
+	a { 
+		color: #FFF; 
+		&:hover { color: darken($dark-brown, 20%); }
+	}
+	
+}
+
+
+

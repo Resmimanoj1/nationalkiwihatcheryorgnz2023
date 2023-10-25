@@ -1,0 +1,39 @@
+NgaiTahuTourism\Footer\Extensions\FooterExtension:
+  footer_logo_path: '/themes/nationalkiwihatcheryorgnz2023/images/logos/hero-logo-black.png'
+
+NgaiTahuTourism\Header\Extensions\HeaderExtension:
+  include_script: false
+  logo_path: '/themes/nationalkiwihatcheryorgnz2023/images/logos/hero-logo.png'
+
+NgaiTahuTourism\SilverStripeBaseRecipe\Languages:
+  default:
+    locale: en_NZ
+
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+
+SilverStripe\SiteConfig\SiteConfig:
+  lazy_loading: true
+
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+  default_spam_protector: UndefinedOffset\NoCaptcha\Forms\NocaptchaProtector
+
+SilverStripe\View\SSViewer:
+  rewrite_hash_links: false
+  themes:
+    - 'nationalkiwihatcheryorgnz2023'
+    - '$default'
+
+UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
+  site_key: "6LdZquUUAAAAALNrXhy_kQSCm8WHXvDQ9PYxarL3"
+  secret_key: "6LdZquUUAAAAAExlV63vXFkEuYxEAJmP1IVVMFTD"
+  default_size: "invisible"
+  verify_ssl: false
+
+---
+Name: baseurl
+Before:
+  - '#framework'
+---
+SilverStripe\Control\Director:
+  alternate_base_url: '`SS_BASE_URL`'

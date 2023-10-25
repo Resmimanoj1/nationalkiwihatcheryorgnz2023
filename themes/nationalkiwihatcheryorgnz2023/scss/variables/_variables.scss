@@ -1,0 +1,37 @@
+//== Brand Guideline Colours (note that hover colours are 10 points lighter for L in the CIELAB color space)
+$dark-brown: #3d301b;
+$dark-brown-hover: #554630;
+$light-brown: #858062;
+$green: #F25A2B;
+$green-hover: #64933d;
+$light-green: #8db936;
+$light-blue: #7fa8b6;
+
+//== Extra Greyscale Colours
+$light-grey: #dcddde;
+$grey: #6d6e71;
+$black: #000;
+$white: #fff;
+
+//== Typography Headings
+$headersh1: 'FontHeadingsh1', Arial, sans-serif;
+$headersh2: 'FontHeadingsh2', Arial, sans-serif;
+$headersh3: 'FontHeadingsh3', Arial, sans-serif;
+$headersh4: 'FontHeadingsh4', Arial, sans-serif;
+$headersh5: 'FontHeadingsh5', Arial, sans-serif;
+$headersh6: 'FontHeadingsh6', Arial, sans-serif;
+$bold: 600;
+$normal: 400;
+
+//== Typography Body
+$bodycopy: 'FontBody', Arial, sans-serif;
+$bodybold: 600;
+$bodynormal: 400;
+
+//==Breakpoints
+$breakpoint-minimobile: 360px;
+$breakpoint-mobile: 560px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-large: 1280px;
+$breakpoint-desktop-mega: 1920px;

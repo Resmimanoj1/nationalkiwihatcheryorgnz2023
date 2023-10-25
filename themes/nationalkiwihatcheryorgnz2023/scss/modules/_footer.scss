@@ -1,0 +1,165 @@
+/* Main Scss Document */
+.footer-nav {
+	float:left; width: 100%; margin: 0; padding: 30px 0; background: #ee3124;
+
+	&__column { float: left; width: 100%; margin: 0; padding: 0; color: #fff; }
+	&__logo { float: left; width: 100%; margin: 0 0 50px 0; padding: 0; text-align: center; border: none;
+		&:hover { border: none; }
+		img { max-width: 200px; height: auto; }
+	}
+	&__social { float: left; width: 100%; text-align: center; padding: 0; text-align: center; }
+	&__social-icon {
+		display: inline-block; margin: 0 5px; width: 30px; height: 30px; color: #FFF;
+		&::before { font-family: "Font Awesome 5 Brands"; font-weight: 900; font-size: 20px; }
+		&.facebook::before { content: "\f39e"; }
+		&.twitter::before { content: "\f099"; }
+		&.youtube::before { content: "\f167"; }
+		&.trip-advisor::before { content: "\f262"; }
+		&.instagram::before { content: "\f16d"; }
+		&:hover { border: none; }
+	}
+	&__column {
+		float: left; width: calc(100% / 4); padding: 20px;
+		&:first-child { width: 100%; }
+		a {
+			color: #FFF; transition: all 0.4s ease-in-out; border: none;
+			font-size: 19px; line-height: 22px;
+			@include mobile { font-size: 16px; line-height: 18px; }
+		}
+		a:hover { color: $dark-brown; border: none; }
+		ul, li { list-style: none; float: left; width: 100%; margin: 0; padding: 0; }
+	 	.links a { float: left; width: 100%; padding: 0 0 5px; }
+		h5 { margin: 12px 0; font-weight: bold; font-family: $headersh4; font-style: normal; }
+
+		@include tablet { width: calc(100% / 2); }
+		@include minimobile {
+			width: 100%; text-align:center;
+			h4 { text-align: center; width: 100%; }
+		}
+	}
+}
+
+.footer-content-bottom {
+	float:left; width: 100%; padding: 15px 30px; background: #6d6e71;
+	p {
+		margin: 0; padding: 0; float: left; clear: none; color: #FFF; font-size: 14px; width: 50%;
+		@include mobile { width:100%; text-align: center; }
+	}
+
+	&__menu { float: right; width: auto;
+		@include mobile { width: 100%; text-align: center; }
+	}
+	&__menu,
+	&__menu-item { list-style: none; margin: 0; padding: 0; display: inline-block;
+		a {
+			color: #FFF; font-size: 14px; margin: 0 5px; padding: 0; border: 0; position: relative; float: left;
+			&:hover { border: none; color: #FFF; }
+			&:after { background: #FFF; }
+
+		}
+
+	}
+
+}
+
+.footer-affiliates {
+	float: left; width: 100%; text-align: center; padding: 20px 0; background: #fff;
+	a { border: none; float: left; }
+	&__badge { display: inline-block; margin: 5px 10px;  }
+}
+
+.ngaitahutourism-footer {
+	text-align: center; float: left; width: 100%; padding: 10px 0 20px 0; background: #fff;
+	a {
+		border:none; color: #000;
+		&:hover { border: none; color: $dark-brown; }
+	}
+
+	h4 { display: none; }
+	.ntt-logo { display: inline-block; width: 300px; height: 30px; margin: 20px 0;}
+
+	ul { float: left; width:100%; }
+	ul, li { list-style: none; margin: 0; padding: 0; text-align:center; }
+	li { width: calc(100% / 6 - 1px); clear: none; float: left; height: 100px; overflow: hidden; position: relative;
+		a {
+			float: left; width: 100%; height: 100px; text-indent: -999px;
+			&:after { display: none; }
+		}
+
+		@include desktop { width: calc(100% / 4 - 1px); }
+		@include tablet {
+			width: calc(100% / 2); height: auto;
+			a { float: left; width: 100%; height: auto; text-indent: 0; padding: 5px 0; }
+		}
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	@include tablet {
+		padding: 10px 30px 20px;
+		h4 { display: block; float: left; width: 100%; position: relative; text-align: left; cursor: pointer; transition: all 0.2s ease-in-out; color: $grey;
+			&:after { position: absolute; content: ''; right: 0; top: 20px; width: 14px; height: 2px; background: $grey; transition: all 0.2s ease-in-out; }
+			&:before { position: absolute; content: ''; right: 6px; top: 14px; height: 14px; width: 2px; background: $grey; transition: all 0.2s ease-in-out;}
+
+			&.open,
+			&:hover { color: #000;
+				&:after {
+					background: #000;
+					moz-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+				&:before {
+					background: #000;
+					moz-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+			}
+		}
+		.ntt-logo { display: none; }
+		ul { display: none; }
+	}
+
+}
+
+
+// To override the default footer nav
+
+.footer__nav {
+	background-color: $green !important;
+}
+
+.footer__nav-column .footer__nav-menu-label {
+	color: $white;
+	font-size: 20px;
+}
+
+.footer__nav-social-icon {
+	text-decoration: none;
+}
+
+a.footer__nav-logo {
+	@media (max-width: 1099px){
+		margin-left: -11px;
+	}
+}
+
+a.footer__nav-logo.footer__nav-logo--ntt {
+	margin-left: 0px;
+
+	@media (min-width: 1100px){
+		margin-left: 11px;
+	  }
+}
+
+.footer__nav-logo.footer__nav-logo--social {
+	@media (min-width: 1100px){
+		margin-left: 11px;
+	  }
+}

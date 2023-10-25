@@ -1,0 +1,79 @@
+/* START Hero Image Text Overlay Block styling */
+
+.hero-img-underlay {
+  background-size: cover;
+  background-position: center;
+  clear: both;
+}
+
+.hero-text-overlay {
+	width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: transparent;
+
+		&.left 	{
+      width: 1600px;
+      padding: 200px 15px 200px 50px;
+      margin: 0 auto;
+    }
+
+    @include desktop-mega {
+			&.left 	{
+        width: 90%;
+        padding: 200px 15px 200px 50px;
+        margin: 0 5%;
+      }
+			&.right {
+        width: 50%;
+        padding: 56px 50px 20px 20px;
+      }
+		}
+
+    @include desktop-large {
+			&.left 	{
+        width: 95%;
+        padding: 200px 15px 200px 0;
+        margin: 0 0 0 50px;
+      }
+			&.right {
+        width: 50%;
+        padding: 56px 50px 20px 20px;
+      }
+		}
+
+		@include desktop {
+			&.left 	{
+        width: 95%;
+        padding: 150px 15px 150px 0;
+        margin: 0 0 0 40px;
+      }
+			&.right {
+        width: 50%;
+        padding: 56px 50px 20px 20px;
+      }
+		}
+
+    @include mobile {
+			&.left 	{
+        width: 100%;
+        padding: 70px 20px 70px 0;
+        margin: 0 0 0 20px;
+      }
+			&.right {
+        width: 100%;
+        padding: 56px 20px 20px 20px;
+      }
+		}
+}
+
+.hero-text-overlay p {
+    color: $white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text-overlay h4 {
+    color: $white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}

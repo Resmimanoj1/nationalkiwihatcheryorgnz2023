@@ -1,0 +1,55 @@
+/* This is for the photogallery - no CSS file was found in the repo for this: https://github.com/dynamic/silverstripe-elemental-gallery so this CSS helps a lot */
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col-md-3.col-sm-4.col-6.photogallery-holder {
+  margin-bottom: 0 !important;
+  padding-right: 10px;
+}
+
+img.img-fluid {
+  height: 300px;
+  width: 300px;
+}
+
+@media (min-width: 1024px){
+  img.img-fluid {
+      height: 250px;
+      width: 250px;
+  }
+}
+
+@media (max-width: 1024px){
+  img.img-fluid {
+      height: 200px;
+      width: 200px;
+  }
+}
+
+@media (max-width: 560px){
+  img.img-fluid {
+      height: 160px;
+      width: 160px;
+  }
+}
+
+.dynamic__elements__gallery__elements__elementphotogallery {
+  float: left;
+  width: 100%;
+}
+
+h2.element__title {
+  padding-left: 10px;
+}
+
+.lb-caption p {
+    color: $white;
+}
+
+.lb-container .lb-nav a.lb-prev, .lb-container .lb-nav a.lb-next {
+  opacity: 1;
+}

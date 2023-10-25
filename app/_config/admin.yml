@@ -1,0 +1,32 @@
+Plastyk\Dashboard\Admin\DashboardAdmin:
+  contact_email: 'digital@nttourism.co.nz'
+  contact_name: 'Ngāi Tahu Tourism Digital Team'
+  panel_accent_color: '#F25A2B'
+
+SilverStripe\Admin\LeftAndMain:
+  menu_groups:
+    Content:
+      children:
+        - NgaiTahuTourism-FAQ-Admin-FAQAdmin
+        - SilverStripe-CMS-Controllers-CMSPagesController
+        - gorriecoe-Menu-Admin-MenuSetAdmin
+        - NgaiTahuTourism-Experiences-Admin-ExperienceAdmin
+        - SilverStripe-AssetAdmin-Controller-AssetAdmin
+        - SilverStripe-CampaignAdmin-CampaignAdmin
+      icon: 'edit'
+    Reports & SEO:
+      children:
+        - SilverStripe-Reports-ReportAdmin
+        - SilverStripe-RedirectedURLs-Admin-RedirectedURLAdmin
+      icon: 'menu-reports'
+    Maintenance:
+      children:
+        - SilverStripe-SiteConfig-SiteConfigLeftAndMain
+        - SilverStripe-Admin-SecurityAdmin
+        - Symbiote-QueuedJobs-Controllers-QueuedJobsAdmin
+        - SilverStripe-VersionedAdmin-ArchiveAdmin
+      icon: 'sliders'
+
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
+    - 'themes/nationalkiwihatcheryorgnz2023/css/editor.css'

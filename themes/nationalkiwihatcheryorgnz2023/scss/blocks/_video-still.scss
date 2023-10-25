@@ -1,0 +1,53 @@
+/* START Video Still Block styling - note that .video__foreground and video__background are in video.scss and javascript files */
+
+.video-still__main{width:100%;background:#000;color:#fff;overflow:hidden;z-index:3;height:300px;position:relative;margin-bottom:8px}
+
+.video-still__center-text {
+  position:absolute;top:50%;left:50%;-webkit-tranform:translate(-50%, -50%);transform:translate(-50%, -50%);width:calc(60% - 40px);text-align:center;z-index:3;color:#FFF
+}
+@media (max-width: 1280px){.video-still__center-text{width:calc(80% - 40px)}}
+@media (max-width: 1024px){.video-still__center-text{width:calc(70% - 40px)}}
+@media (max-width: 768px){.video-still__center-text{width:calc(100% - 80px)}}
+@media (max-width: 560px){.video-still__center-text{width:calc(100% - 40px)}}
+
+
+.video-still-title {
+	font-size: 70px; line-height: 85px; padding: 16px 0 12px 0;
+	@include tablet { font-size: 45px; line-height: 50px; padding: 14px 0 10px 0; }
+}
+
+
+@media (max-width: 1023px){
+  .video-still__main .video-still__logo {display:none}
+}
+
+.video-still__main .video-still__video-container{height:100%;padding:0}
+.video-still__main .video__foreground{display:none}
+.video-still__main .video-still__image{width:100%;height:300px;background-size:cover;background-position:center}
+
+@media (max-width: 767px){
+  .video-still__main{height:350px}
+  .video-still__title-text{top:0;padding-top:0}
+  .video-still__body-text{top:0;padding-top:0}
+  .video-still__body-text p {padding: 0 0 8px; line-height: 22px; font-size: 18px;}
+  .video-still__main .video-still__image{height:450px}
+}
+
+@media (min-width: 768px){
+  .video-still__main{height:450px}
+  .video-still__logo{display:inline-block;padding-top:2rem;margin-bottom:1.5rem;width:250px;height:auto;}
+  .video-still__title-text{top:0;padding-top:2rem}
+  .video-still__body-text{top:0;padding-top:0}
+  .video-still__body-text p {padding: 0 0 8px; line-height: 24px; font-size: 19px;}
+  .video-still__main .video-still__image{height:450px}
+}
+
+@media (min-width: 1024px){
+  .video-still__main{height:87vh}
+  .video-still__logo{display:inline-block;padding-top:5rem;margin-bottom:1.5rem;width:300px;height:auto;}
+  .video-still__title-text{top:0;font-size: 55px; line-height: 55px; padding: 5px 0;}
+  .video-still__body-text{top:0;padding-top:0}
+  .video-still__body-text p {padding: 0 0 8px; line-height: 24px; font-size: 19px;}
+  .video-still__main .video__foreground{display:block}
+  .video-still__main .video-still__image{height:100%}
+}

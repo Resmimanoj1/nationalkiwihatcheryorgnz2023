@@ -1,0 +1,75 @@
+// Override some styling application to display carousel correctly
+.carousel-block {
+  $block: &;
+
+  #{$block}__control {
+    transform: none;
+    margin-top: 6px;
+
+    // add values based on custom side padding applied on the element
+    @include desktop {
+      left: calc(0.8% + 20px);
+      margin-top: 0;
+    }
+
+    left: calc(0.8% + 30px);
+  }
+
+  #{$block}__control-next,
+  #{$block}__control-prev {
+    position: relative;
+
+    @include tablet {
+      width: 30px;
+      height: 30px;
+
+      &::after {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        transform: translate(-55%, -50%);
+      }
+    }
+  }
+
+  #{$block}__control-next::after {
+    @include tablet {
+      margin-left: 0;
+      transform: translate(-45%, -50%) rotate(180deg);
+    }
+  }
+
+  #{$block}__control--next {
+    left: unset;
+
+    // add values based on custom side padding applied on the element
+    @include desktop {
+      right: calc(0.8% + 20px);
+    }
+
+    right: calc(0.8% + 30px);
+  }
+
+  // Add this to fix iOS issue with border-radius
+  .tns-nav button {
+    padding: 0;
+  }
+}
+
+a.carousel-block__item-link.btn {
+  background-color: $green;
+  font-family: $headersh3;
+  font-weight: $bodynormal;
+}
+
+a.carousel-block__item-link.btn:hover {
+  background-color: $green-hover;
+}
+
+h3.carousel-block__item-title {
+  color: $green;
+}
+
+.carousel-block .tns-nav-active {
+    background-color: $dark-brown !important;
+}

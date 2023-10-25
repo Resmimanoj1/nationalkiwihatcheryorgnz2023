@@ -1,0 +1,19 @@
+NgaiTahuTourism\ElementalBlocks\BlocksPage:
+  allowed_elements:
+    - ElementHeading
+    - ElementHero
+    - ElementHeroImageTextOverlay
+    - ElementImageText
+    - ElementExperienceDetail
+    - ElementExperienceListing
+    - ElementRepeater
+    - ElementVideoStill
+    - NgaiTahuTourism\ElementalBlocks\ElementDoubleColumn
+    - NgaiTahuTourism\ElementalBlocks\ElementVideo
+    - Dynamic\Elements\Gallery\Elements\ElementPhotoGallery
+    - NgaiTahuTourism\ElementalBlocks\Model\Carousel\ElementCarousel
+    - NgaiTahuTourism\ElementalBlocks\Model\Itinerary\ElementItinerary
+    - NgaiTahuTourism\ElementalBlockForFAQ\ElementFAQ
+
+  disallowed_elements:
+    - DNADesign\Elemental\Models\ElementContent

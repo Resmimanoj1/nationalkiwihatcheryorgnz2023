@@ -1,0 +1,169 @@
+// Border Radius @include border-radius(10px);
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+  
+// Opacity @include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+  
+  // Absolute Positioning @include abs-pos(10px, 10px, 5px, 15px);
+  @mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+  }
+  
+  // Box Shadow @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.5));
+  @mixin box-shadow($top, $left, $blur, $color) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow:    $top $left $blur $color;
+    box-shadow:         $top $left $blur $color;
+  }
+  
+  // Transitions @include transition(background-color 1s .5s, color 2s);
+  @mixin transition($transition...) {
+         -moz-transition: $transition;
+           -o-transition: $transition;
+      -webkit-transition: $transition;
+              transition: $transition;
+  }
+  @mixin transition-property($property...) {
+      -moz-transition-property:    $property;
+      -o-transition-property:      $property;
+      -webkit-transition-property: $property;
+      transition-property:         $property;
+  }
+  @mixin transition-duration($duration...) {
+      -moz-transition-property:    $duration;
+      -o-transition-property:      $duration;
+      -webkit-transition-property: $duration;
+      transition-property:         $duration;
+  }
+  @mixin transition-timing-function($timing...) {
+      -moz-transition-timing-function:    $timing;
+      -o-transition-timing-function:      $timing;
+      -webkit-transition-timing-function: $timing;
+      transition-timing-function:         $timing;
+  }
+  @mixin transition-delay($delay...) {
+      -moz-transition-delay:    $delay;
+      -o-transition-delay:      $delay;
+      -webkit-transition-delay: $delay;
+      transition-delay:         $delay;
+  }
+  
+  // Font Include
+  @mixin font-face($name, $files, $eot: false, $weight: false, $style: false) {
+    $name: quote($name);
+    @font-face {
+      font-family: $name;
+      @if $eot {
+        src: url($eot);
+        $files: join("#{$eot}", $files);
+      }
+      src: add-font-format($files, $name);
+      @if $weight { 
+        font-weight: $weight;
+      }
+      @if $style {
+        font-style: $style;
+      }
+    }
+  }
+  
+@function add-font-format($fonts, $name: '') {
+  $result: ();
+  @each $font in $fonts {
+    $format: '';
+   $extension: str-slice($font, str-index($font, '.') + 1);
+    @if $extension == "eot" {
+      $font: "#{$extension}?#iefix";
+      $format: 'embedded-opentype'
+    } 
+    @elseif $extension == "ttf" {
+      $format: 'truetype';
+    } 
+    @else {
+      $format: $extension;
+    }
+    @if $extension == "svg" {
+      $font: '#{$font}##{$name}';
+    }
+    $result: append($result, unquote('url("#{$font}") format("#{$format}")'), comma);
+  }
+  @return $result;
+}
+  
+  // Transform
+  // generic transform
+  @mixin transform($transforms) {
+      -moz-transform: $transforms;
+        -o-transform: $transforms;
+       -ms-transform: $transforms;
+   -webkit-transform: $transforms;
+           transform: $transforms;
+  }
+  // translate
+  @mixin translate ($x) {
+    @include transform(translateZ($x));
+  }
+
+  // Gradient @include linear-gradient(hotpink, tomato);
+  @mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+  }
+
+  // Media queries
+  // Media queries
+ 		//breakpoint-minimobile: 360px;
+		//breakpoint-mobile: 560px;
+		//breakpoint-tablet: 768px;
+		//breakpoint-desktop: 992px;
+		//breakpoint-desktop-large: 1200px;
+	
+  @mixin minimobile {
+    @media (max-width: #{$breakpoint-minimobile}) {
+      @content;
+    }
+  }
+
+  @mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      @content;
+    }
+  }
+
+  @mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  }
+
+  @mixin desktop {
+    @media (max-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+  }
+
+  @mixin desktop-large {
+    @media (max-width: #{$breakpoint-desktop-large}) {
+      @content;
+    }
+  }
+
+  @mixin desktop-mega {
+    @media (max-width: #{$breakpoint-desktop-mega}) {
+      @content;
+    }
+  }

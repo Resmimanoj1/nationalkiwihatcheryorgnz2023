@@ -1,0 +1,8 @@
+/* Image Text Scss Document */
+
+.image-text-reverse {
+  flex-direction: row;
+  @include desktop {
+    flex-direction: column-reverse;
+  }
+}

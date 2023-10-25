@@ -1,0 +1,29 @@
+---
+Name: AWSConfig
+After:
+    - '*'
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Control\Email\Mailer:
+    class: Symbiote\SilverStripeSESMailer\Mail\SESMailer
+    constructor:
+      config:
+        credentials:
+          key: '`AWS_SES_KEY`'
+          secret: '`AWS_SES_SECRET`'
+        region: us-east-1
+        version: '2010-12-01'
+        signature_version: 'v4'
+    properties:
+      alwaysFrom: info@nzwalks.com
+      region: us-east-1
+      key: '`AWS_SES_KEY`'
+      secret: '`AWS_SES_SECRET`'
+
+SilverStripe\Control\Email\Email:
+  send_all_emails_from: info@nzwalks.com
+  admin_email: info@nzwalks.com
+
+Symbiote\SilverStripeSESMailer\Mail\Config:
+  region: us-east-1
+  version: '2010-12-01'

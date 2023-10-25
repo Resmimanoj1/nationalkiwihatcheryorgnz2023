@@ -1,0 +1,19 @@
+/* Two Col Scss Document */
+
+.headingblock {
+	float: left; width: 100%; margin: 0; padding: 0; position: relative; background: #efefef; margin: 40px 0 0;
+	@include mobile { margin: 20px 0; }
+
+	&__container {
+		float: left; width: 100%; padding: 30px 30px;
+		@include tablet { padding: 30px 20px; }
+
+		h2 { padding: 0; margin: 0 0 10px; }
+		h3 { padding-top: 0; }
+
+		.btnrow { float: left; width: 100%; margin: 20px 0 0;}
+
+	}
+
+	&__spacer { float: left; width:100%; height: 5px;}
+}

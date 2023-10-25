@@ -1,0 +1,175 @@
+/* Fonts for Guided Walks Website */
+
+/* Custom Fonts - syntax via https://css-tricks.com/snippets/css/using-font-face-in-css/ */
+@font-face {
+    font-family: 'FontBody';
+    src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Book-Web.eot'), /* IE9 Compat Modes */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Book-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Book-Web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Book-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Book-Web.svg#svgStagBookWeb') format('svg'); /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontHeadingsh1';
+    src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.eot'), /* IE9 Compat Modes */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.svg#svgStagSemiboldWeb') format('svg'); /* Legacy iOS */
+    font-weight: 600;
+}
+
+@font-face {
+  font-family: 'FontHeadingsh2';
+  src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.svg#svgStagMediumWeb') format('svg'); /* Legacy iOS */
+font-weight: 600;
+}
+
+@font-face {
+  font-family: 'FontHeadingsh3';
+  src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.eot'), /* IE9 Compat Modes */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.svg#svgStagMediumWeb') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontHeadingsh4';
+  src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Light-Web.eot'), /* IE9 Compat Modes */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Light-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Light-Web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Light-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Light-Web.svg#svgStagLightWeb') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontHeadingsh5';
+  src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.eot'), /* IE9 Compat Modes */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Medium-Web.svg#svgStagMediumWeb') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontHeadingsh6';
+  src: url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.eot'), /* IE9 Compat Modes */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/themes/nationalkiwihatcheryorgnz2023/webfonts/Stag-Semibold-Web.svg#svgStagSemiboldWeb') format('svg'); /* Legacy iOS */
+  font-weight: 600;
+}
+
+
+body { font-family: $bodycopy; font-weight: $bodynormal; font-size: 1rem; line-height: 1.5rem; margin: 0; padding: 0; }
+.main-container { width: 100%; overflow: hidden; margin: 0; padding: 0; background-color: #fff; }
+
+h1 { font-family: $headersh1; font-weight: $bold; clear: both;}
+h2 { font-family: $headersh2; font-weight: $bold; clear: both;}
+h3 { font-family: $headersh3; font-weight: $normal; clear: both;}
+h4 { font-family: $headersh4; font-weight: $normal; clear: both;}
+h5 { font-family: $headersh5; font-weight: $normal; clear: both;}
+h6 { font-family: $headersh6; font-weight: $bold; clear: both;}
+
+h1 {
+	font-size: 4em;
+  line-height: 1.3em;
+  padding: 16px 0 12px 0;
+  color: $white;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+	@include tablet { font-size: 3.5em; line-height: 1.3em; padding: 14px 0 10px 0; }
+	@include mobile { font-size: 2.5em; line-height: 1.3em; padding: 12px 0 8px 0; }
+}
+
+h2 {
+	font-size: 2em; line-height: 1.3em; padding: 11px 0 12px 0; color: $dark-brown;
+	@include tablet { font-size: 1.8em; line-height: 1.3em; padding: 14px 0 10px 0; }
+	@include mobile { font-size: 1.6em; line-height: 1.3em; padding: 12px 0 8px 0; }
+}
+
+h3 {
+	font-size: 1.5em; line-height: 1.3em; padding: 11px 0 10px 0; color: $green;
+	@include tablet { font-size: 1.8em; line-height: 1.3em; padding: 12px 0 8px 0; }
+	@include mobile { font-size: 1.6em; line-height: 1.3em; padding: 10px 0 6px 0; }
+}
+
+h4 { font-size: 1.3em;	line-height: 1.4em;	padding: 12px 0 17px 0; }
+
+body, p {
+  background-color: transparent;
+	font-family: $bodycopy; font-size: 1.1rem; line-height: 1.9em; color: $dark-brown;
+	@include tablet { font-size: 1.05rem; line-height: 1.8em; }
+	@include mobile { font-size: 1rem; line-height: 1.7em; }
+}
+p { padding: 0 0 12px; }
+
+strong { font-weight: $bodybold; }
+strong.red { color: $dark-brown; }
+
+em { font-style: normal; }
+
+ul, ol { float: left; width: 100%; margin: 0 0 12px; padding: 0; clear: both; font-family: $bodycopy; font-style:normal;}
+ul { list-style: disc; }
+ol { list-style: decimal; }
+li { margin: 0 0 0 30px; }
+
+a {
+	color: $green; text-decoration: underline; position: relative; display: inline-block;
+	&:after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: transparent;
+		transition: width .3s ease-in-out;
+		bottom: 0px;
+		position: absolute;
+	}
+  &:hover {color: $green-hover; text-decoration: none;}
+	&:hover:after {width: 100%; color: $green-hover;}
+
+}
+
+.red a {
+	color:#FFF;
+	&:after { width: 100%; background: rgba(255,255,255,.5); }
+	&:hover:after { width: 0; background: rgba(255,255,255,1);  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.faq-container h2 {
+  color: $green;
+}
+
+.two-col__col h3 {
+  padding-top: 3px;
+}

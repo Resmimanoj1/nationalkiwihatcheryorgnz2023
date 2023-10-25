@@ -1,0 +1,31 @@
+{
+    "author": {
+        "email": "fern.king@ngaitahu.iwi.nz",
+        "name": "Ngāi Tahu Tourism",
+        "url": "https://www.ngaitahutourism.co.nz"
+    },
+    "bugs": {
+        "email": "fern.king@ngaitahu.iwi.nz",
+        "url": "https://github.com/ngaitahutourism/nzwalks2023/issues"
+    },
+    "dependencies": {},
+    "description": "Guided Walks SilverStripe website.",
+    "homepage": "https://www.nzwalks.com/",
+    "license": "UNLICENSED",
+    "main": "main.php",
+    "name": "@ngaitahutourism/nzwalkscom",
+    "private": true,
+    "repository": "ngaitahutourism/nzwalkscom2022",
+    "scripts": {
+        "build": "run-script-os",
+        "build:windows": "composer install & npm prune & npm install & composer vendor-expose & php vendor/silverstripe/framework/cli-script.php dev/build flush=all",
+        "build:default": "composer install ; npm prune ; npm install ; composer vendor-expose ; php vendor/silverstripe/framework/cli-script.php dev/build flush=all",
+        "update": "run-script-os",
+        "update:windows": "del npm-shrinkwrap.json & composer update & npm run build",
+        "update:default": "rm npm-shrinkwrap.json ; composer update ; npm run build"
+    },
+    "version": "1.0.0",
+    "devDependencies": {
+        "run-script-os": "^1.0.7"
+    }
+}

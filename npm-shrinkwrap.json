@@ -1,0 +1,26 @@
+{
+    "name": "@ngaitahutourism/nzwalkscom",
+    "version": "1.0.0",
+    "lockfileVersion": 3,
+    "requires": true,
+    "packages": {
+        "": {
+            "name": "@ngaitahutourism/nzwalkscom",
+            "version": "1.0.0",
+            "license": "UNLICENSED",
+            "devDependencies": {
+                "run-script-os": "^1.0.7"
+            }
+        },
+        "node_modules/run-script-os": {
+            "version": "1.0.7",
+            "resolved": "https://registry.npmjs.org/run-script-os/-/run-script-os-1.0.7.tgz",
+            "integrity": "sha512-H4NAhP9PiseQQm3Vpen7CHksfKGqC4dmwoVu/9th97r3XyBrMtkg4jIUiy/8dgzuI9MGwmK/7vf13Wncx+Y4bw==",
+            "dev": true,
+            "bin": {
+                "run-os": "index.js",
+                "run-script-os": "index.js"
+            }
+        }
+    }
+}

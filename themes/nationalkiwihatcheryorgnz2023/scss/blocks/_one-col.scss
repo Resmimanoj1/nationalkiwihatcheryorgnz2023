@@ -1,0 +1,32 @@
+/* One Col Scss Document */
+
+.one-col {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: transparent;
+	&__col {
+		width: 1600px;
+		padding: 30px 25px 30px 30px;
+		margin: 0;
+
+		@include desktop-large {
+			width: 100%;
+			padding: 30px 25px 30px 30px;
+		}
+
+		@include desktop {
+			width: 100%;
+			padding: 20px 20px 0px 20px;
+		}
+
+	}
+
+}
+
+
+.grey .one-col {
+	background: #efefef;
+}
