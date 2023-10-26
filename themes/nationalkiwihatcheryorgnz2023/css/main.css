@@ -5285,10 +5285,10 @@ body.hold {
 	top:34px
 }
 .page-header__mobile-menu-trigger:hover {
-	color:#3d301b
+	color:#f25a2b
 }
 .page-header__mobile-menu-trigger:hover::after,.page-header__mobile-menu-trigger:hover::before {
-	background:#3d301b
+	background:#fff
 }
 .page-header__mobile-menu-trigger:hover::before {
 	transform:rotate(45deg);
@@ -5460,7 +5460,7 @@ a.page-header__mobile-menu-trigger {
 	color:#f25a2b
 }
 .btn.trans:hover,a,a:hover,a:hover:after,h3 {
-	color:#f25a2b
+	color:#fff
 }
 .btn {
 	padding:17px 25px 15px;
